@@ -1,5 +1,51 @@
-body {
+/*when small logo !false margin-left:89%;
+*/
+.logo {
+  height: 10%;
+  width: 10%;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  background: pink;
+}
+
+*, html {
   margin: 0;
+  padding: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: pink;
+  color: pink;
+  height: 10%;
+}
+
+.insidebig {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  width: 60%;
+  background-color: grey;
+}
+
+.insideinsidebig {
+  background-color: red;
+  margin-left: 3%;
+  border-radius: 3px;
+  text-align: center;
+  border-style: solid;
+  border-color: green;
+  height: 7000px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .active {
@@ -45,5 +91,9 @@ body {
   ul.topMenu li.right,
   ul.topMenu li {
     float: none;
+  }
+
+  .logo {
+    margin-left: 90%;
   }
 }

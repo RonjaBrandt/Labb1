@@ -1,16 +1,3 @@
-.logo {
-  height: 10%;
-  width: 10%;
-}
-
-@media only screen and (max-width:500px) {
-  .logo {
-    padding-left: 70%;
-    height: 20%;
-    width: 20%;
-  }
-}
-
 header {
   height: 100%;
   width: 100%;
@@ -20,6 +7,9 @@ header {
 *, html {
   margin: 0;
   padding: 0;
+}
+ul {
+  list-style-type: none;
 }
 
 footer {
@@ -33,30 +23,41 @@ footer {
 }
 
 /*****************
+Logo
+******************/
+.logo img {
+  margin: 0;
+  width: 20%;
+  height: 20%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width:500px) {
+  .logo {
+    flex-direction: row-reverse;
+  }
+}
+
+/*****************
 Navigation Links
 ******************/
 nav {
   list-style-type: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: pink;
+  display: flex;
+  flex-direction: row;
 }
 
-nav li {
-  float: left;
-}
-
-nav li.right {
-  float: right;
-}
-
-@media only screen and (max-width:500px) {
-  nav li.right {
-    float: left;
+@media only screen and (min-width:500px) {
+  nav {
+    flex-direction: row-reverse;
   }
 }
 
@@ -79,12 +80,9 @@ nav li a.active {
 /**************
 
   ***************/
-ul {
-  list-style-type: none;
-}
+
 
 .prodimg {
-  float: left;
   height: 20%;
   width: 20%;
 }

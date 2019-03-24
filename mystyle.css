@@ -59,15 +59,11 @@ footer {
   background-color: grey;
 }
 
-ul {
+/*****************
+Navigation Links
+******************/
+nav {
   list-style-type: none;
-}
-
-.active {
-  background-color: #FE4AEC;
-}
-
-.topMenu {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -77,19 +73,21 @@ ul {
   background-color: pink;
 }
 
-.topMenu ul {
-  list-style-type: none;
-}
-
-.topMenu li {
+nav li {
   float: left;
 }
 
-.topMenu li.right {
+nav li.right {
   float: right;
 }
 
-.topMenu li a {
+@media only screen and (max-width:500px) {
+  nav li.right {
+    float: left;
+  }
+}
+
+nav li a {
   display: block;
   color: black;
   text-align: center;
@@ -97,10 +95,17 @@ ul {
   text-decoration: none;
 }
 
-.topMenu li a:hover {
+nav li a:hover {
   background-color: #FE4AEC;
 }
 
+nav li a.active {
+  background-color: #FE4AEC;
+}
+
+/**************
+
+  ***************/
 .prodimg {
   height: 40%;
   width: 40%;
@@ -112,8 +117,3 @@ ul {
   border-width: 3px;
   margin-left: 65%;
 }
-
-@media only screen and (max-width:500px) {
-  .topMenu li.right {
-    float: left;
-  }

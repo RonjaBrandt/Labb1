@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(203, 194, 239);
-}
-
 .logo {
   height: 10%;
   width: 10%;
@@ -34,29 +30,6 @@ footer {
   background-color: pink;
   color: pink;
   height: 10%;
-}
-
-.insidebig {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 10px;
-  width: 60%;
-  padding-right: 1%;
-  padding-top: 1%;
-  padding-bottom: 10%;
-  margin-bottom: 10%;
-}
-
-.insideinsidebig {
-  float: left;
-  background-color: red;
-  margin-left: 3%;
-  border-radius: 3px;
-  border-style: solid;
-  border-color: green;
-  text-align: center;
-  color: white;
-  background-color: grey;
 }
 
 /*****************
@@ -106,14 +79,34 @@ nav li a.active {
 /**************
 
   ***************/
-.prodimg {
-  height: 40%;
-  width: 40%;
+ul {
+  list-style-type: none;
 }
 
-.ovrigt {
+.prodimg {
+  height: 10%;
+  width: 10%;
+}
+
+.cssGriPlusFlex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  width: 60%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 10%;
+  margin-bottom: 10%;
+  float: left;
+  margin-left: 3%;
+  border-radius: 3px;
   border-style: solid;
   border-color: green;
-  border-width: 3px;
-  margin-left: 65%;
+  text-align: center;
+  color: white;
+  background-color: grey;
+}
+
+body {
+  background-color: #d6cbd3;
 }

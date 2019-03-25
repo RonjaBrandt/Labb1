@@ -57,7 +57,6 @@ nav {
   background-color: pink;
   display: flex;
   flex-direction: row;
-
 }
 
 @media only screen and (min-width:500px) {
@@ -85,11 +84,6 @@ nav li a.active {
 /**************
 
   ***************/
-.highestgrid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
 .prodimg {
   padding-left: 1%;
   height: 20%;
@@ -131,9 +125,61 @@ nav li a.active {
 
 .boxes {
   display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   padding: 1% 1% 1% 1%;
-  border-color: blue;
+  border-style: solid;
+  border-color: purple;
   border-width: 3px;
-  background-color: grey;
+  background-color: #f7cac9;
+}
+
+/***************
+Contact page
+****************/
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  width: 60%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.contact-box {
+  display: grid;
+  display: flex;
+  padding: 1% 1% 1% 1%;
+  border-style: solid;
+  border-color: purple;
+  border-width: 3px;
+  background-color: #f7cac9;
+}
+
+.contactimg {
+  width: 200px;
+  height: 300px;
+}
+
+.contact-info {}
+
+.contact-info h2 {
+  position: relative;
+  top: 0;
+  left: 10px;
+}
+
+.contact-info h3 {
+  position: relative;
+  top: 0;
+  left: 10px;
+}
+
+.contact-info h4{
+  position: relative;
+  top: 0;
+  left: 10px;
+}
+.contact-info li{
+  position: relative;
+  top: 0;
+  left: 10px;
 }

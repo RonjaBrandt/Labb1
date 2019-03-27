@@ -13,10 +13,6 @@ body {
   padding: 0;
 }
 
-ul {
-  list-style-type: none;
-}
-
 footer {
   position: fixed;
   left: 0;
@@ -24,7 +20,7 @@ footer {
   width: 100%;
   background-color: pink;
   color: pink;
-  height: 10%;
+  height: 5%;
 }
 
 /*****************
@@ -52,7 +48,8 @@ Navigation Links
 ******************/
 nav {
   list-style-type: none;
-  top: 0 padding: 0;
+  top: 0;
+  padding: 0;
   overflow: hidden;
   background-color: pink;
   display: flex;
@@ -65,7 +62,7 @@ nav {
   }
 }
 
-nav li a {
+nav a {
   display: block;
   color: black;
   text-align: center;
@@ -73,11 +70,11 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover {
+nav a:hover {
   background-color: #FE4AEC;
 }
 
-nav li a.active {
+nav a.active {
   background-color: #FE4AEC;
 }
 
@@ -88,7 +85,7 @@ nav li a.active {
   padding-left: 1%;
   height: 100%;
   width: 100%;
-  margin: 1%, 1%, 1%, 1%;
+  margin: 1% 1% 1% 1%;
 }
 
 .ovrigt {
@@ -101,7 +98,7 @@ nav li a.active {
   border-color: purple;
   border-width: 3px;
   margin-right: 1%;
-  padding: 3px, 3px, 3px, 3px;
+  padding: 3px 3px 3px 3px;
 }
 
 /*
@@ -160,9 +157,6 @@ nav li a.active {
   margin-top: 4px;
 }
 
-/*
-  all css för kontakt föjer nedan förutom header, footer + logga.
-  */
 .specificItemInfo {
   border-style: solid;
   border-color: purple;
@@ -175,14 +169,22 @@ Contact page
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  width: 60%;
+  width: 40%;
   grid-gap: 10px;
   padding: 10px;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width:1300px) {
+  .contact-grid {
+    margin-bottom: 20%;
+  }
 }
 
 .contact-box {
   display: grid;
   display: flex;
+  position: relative;
   padding: 1% 1% 1% 1%;
   border-style: solid;
   border-color: purple;
@@ -191,32 +193,51 @@ Contact page
 }
 
 .contactimg {
-  width: 200px;
-  height: 300px;
+  float: left;
+  width: 250px;
+  height: 250px;
 }
 
-.contact-info {}
-
-.contact-info h2 {
+/*****************
+Contact Ronja
+*****************/
+.contact-info-Ronja {
   position: relative;
-  top: 0;
+  float: left;
   left: 10px;
+  width: 300px
 }
 
-.contact-info h3 {
-  position: relative;
-  top: 0;
-  left: 10px;
+.contact-info-Ronja h4 {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
 }
 
-.contact-info h4 {
-  position: relative;
-  top: 0;
-  left: 10px;
+.contact-info-Ronja ul {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
 }
 
-.contact-info li {
+/*********************
+    Contact Oscar
+**********************/
+.contact-info-Oscar {
   position: relative;
-  top: 0;
+  float: left;
   left: 10px;
+  width: 300px
+}
+
+.contact-info-Oscar h4 {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+}
+
+.contact-info-Oscar ul {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
 }

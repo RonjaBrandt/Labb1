@@ -1,16 +1,35 @@
-header {
-  height: 100%;
-  width: 100%;
-  background: pink;
-}
-
 body {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  padding-bottom: 60px;
   background-color: #d6cbd3;
 }
 
-*, html {
-  margin: 0;
-  padding: 0;
+/*
+  mediarule när man krymper.
+
+  */
+@media only screen and (max-width:500px) {
+  body {
+    grid-template-columns: 100%;
+  }
+}
+
+header {
+  grid-column: 1/5;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background: pink;
+}
+
+ul {
+  list-style-type: none;
 }
 
 footer {
@@ -20,7 +39,7 @@ footer {
   width: 100%;
   background-color: pink;
   color: pink;
-  height: 5%;
+  height: 60px;
 }
 
 /*****************
@@ -47,9 +66,11 @@ Logo
 Navigation Links
 ******************/
 nav {
+  display: flex;
+  grid-column: 2;
+  grid-row: 4;
   list-style-type: none;
-  top: 0;
-  padding: 0;
+  padding-right: 1%;
   overflow: hidden;
   background-color: pink;
   display: flex;
@@ -85,60 +106,100 @@ nav a.active {
   padding-left: 1%;
   height: 100%;
   width: 100%;
-  margin: 1% 1% 1% 1%;
+  margin: 1%, 1%, 1%, 1%;
 }
 
 .ovrigt {
   display: grid;
-  grid-column: 4 / 7;
-  grid-row: 1 / 30;
-  background-color: #f7cac9;
+  display: flex;
+  grid-row: 2;
   padding: 1% 1% 1% 1%;
+  margin-left: 1%;
   border-style: solid;
   border-color: purple;
   border-width: 3px;
-  margin-right: 1%;
-  padding: 3px 3px 3px 3px;
+  background-color: #f7cac9;
+}
 }
 
 /*
   MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
   */
-@media only screen and (max-width:1300px) {
+@media only screen and (max-width:500px) {
   .ovrigt {
-    grid-column: 1/2;
-    grid-row: auto;
-  }
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-/*
-  mediarule för margin bot när man krymper.
-
-  */
-@media only screen and (max-width:1300px) {
-  .grid-container {
-    margin-bottom: 20%;
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 
 /*
   product rutor, färdiga, flex plus grid.
   */
-.boxes {
+.boxes-1 {
   display: grid;
   display: flex;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1% 1% 1% 1%;
+  margin-left: 1%;
+  border-style: solid;
+  border-color: purple;
+  border-width: 3px;
+  background-color: #f7cac9;
+}
+
+/*
+  MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
+  */
+@media only screen and (max-width:500px) {
+  .boxes-1 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.boxes-2 {
+  display: grid;
+  display: flex;
+  grid-column: 2;
+  grid-row: 2;
   padding: 1% 1% 1% 1%;
   border-style: solid;
   border-color: purple;
   border-width: 3px;
   background-color: #f7cac9;
+}
+
+/*
+  MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
+  */
+@media only screen and (max-width:500px) {
+  .boxes-2 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+.boxes-3 {
+  display: grid;
+  display: flex;
+  grid-column: 3;
+  grid-row: 2;
+  padding: 1% 1% 1% 1%;
+  border-style: solid;
+  border-color: purple;
+  border-width: 3px;
+  background-color: #f7cac9;
+}
+
+/*
+  MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
+  */
+@media only screen and (max-width:500px) {
+  .boxes-3 {
+    grid-column: 1;
+    grid-row: 5;
+  }
 }
 
 /*
@@ -157,6 +218,9 @@ nav a.active {
   margin-top: 4px;
 }
 
+/*
+  all css för kontakt föjer nedan förutom header, footer + logga.
+  */
 .specificItemInfo {
   border-style: solid;
   border-color: purple;
@@ -166,78 +230,160 @@ nav a.active {
 /***************
 Contact page
 ****************/
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-  width: 40%;
-  grid-gap: 10px;
-  padding: 10px;
-  margin-bottom: 5%;
-}
-
-@media only screen and (max-width:1300px) {
-  .contact-grid {
-    margin-bottom: 20%;
-  }
-}
-
-.contact-box {
-  display: grid;
-  display: flex;
+/***************
+Ronja contact
+****************/
+.contact-box-Ronja {
   position: relative;
-  padding: 1% 1% 1% 1%;
+  height: 600px;
+  width: 1000px;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 0px;
   border-style: solid;
   border-color: purple;
   border-width: 3px;
   background-color: #f7cac9;
 }
 
-.contactimg {
-  float: left;
-  width: 250px;
-  height: 250px;
+/*
+  MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
+  */
+@media only screen and (max-width:900px) {
+  .contact-box-Ronja {
+    height: 400px;
+    width: 550px;
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
-/*****************
-Contact Ronja
-*****************/
-.contact-info-Ronja {
-  position: relative;
+.contactimg-Ronja {
+  height: 600px;
+  width: 500px;
   float: left;
+}
+
+@media only screen and (max-width:900px) {
+  .contactimg-Ronja {
+    height: 400px;
+    width: 300px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.contact-box-Ronja h2 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 0px;
   left: 10px;
-  width: 300px
-}
-
-.contact-info-Ronja h4 {
-  position: absolute;
-  bottom: 55px;
-  left: 0;
-}
-
-.contact-info-Ronja ul {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-}
-
-/*********************
-    Contact Oscar
-**********************/
-.contact-info-Oscar {
   position: relative;
-  float: left;
+}
+
+.contact-box-Ronja h3 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
   left: 10px;
-  width: 300px
+  position: relative;
 }
 
-.contact-info-Oscar h4 {
-  position: absolute;
-  bottom: 55px;
-  left: 0;
+.contact-box-Ronja h4 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  left: 10px;
+  position: relative;
+  bottom: -200px;
 }
 
-.contact-info-Oscar ul {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
+.contact-box-Ronja li {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  left: 10px;
+  position: relative;
+  bottom: -200px;
+}
+
+.clear {
+  clear: both;
+}
+
+/****************
+Oscar contact
+****************/
+.contact-box-Oscar {
+  position: relative;
+  height: 600px;
+  width: 1000px;
+  grid-column: 1;
+  grid-row: 3;
+  padding: 0px;
+  border-style: solid;
+  border-color: purple;
+  border-width: 3px;
+  background-color: #f7cac9;
+}
+
+/*
+  MEDIARTULE FÖR ÖVERGRIPANDE FUNKTIONALITET I MOBILLÄGE
+  */
+@media only screen and (max-width:900px) {
+  .contact-box-Oscar {
+    height: 400px;
+    width: 550px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.contactimg-Oscar {
+  height: 600px;
+  width: 500px;
+  float: left;
+}
+
+@media only screen and (max-width:900px) {
+  .contactimg-Oscar {
+    height: 400px;
+    width: 300px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.contact-box-Oscar h2 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  left: 10px;
+  position: relative;
+}
+
+.contact-box-Oscar h3 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  left: 10px;
+  position: relative;
+}
+
+.contact-box-Oscar h4 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  left: 10px;
+  position: relative;
+  bottom: -200px;
+}
+
+.contact-box-Oscar li {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+  left: 10px;
+  position: relative;
+  bottom: -200px;
 }
